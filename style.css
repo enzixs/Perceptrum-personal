@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+body, html{
+  margin:0; padding:0;
+  font-family:'Orbitron', sans-serif;
+  background:#0a0a0a; /* fondo negro */
+  color:#fff;          /* texto principal blanco */
+  overflow-x:hidden;
+}
+
+/* ---------- SECCIONES CINEMÁTICAS ---------- */
+.screen{
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px 20px;
+  position:relative;
+  overflow:visible;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+/* Imagen Perceptrum gigante con glow naranja/rojo */
+.logo-intro{
+  width:400px;
+  max-width:80vw;
+  margin-bottom:40px;
+  border-radius:20px;
+  box-shadow:0 0 60px #ff7700,0 0 100px #ff4444,0 0 150px #ff7700;
+  background:linear-gradient(135deg,#ff7700 0%,#ff4444 100%);
+  padding:20px;
+  animation:pulse 2.5s infinite alternate;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1); box-shadow:0 0 60px #ff7700,0 0 100px #ff4444,0 0 150px #ff7700;}
+  100%{transform:scale(1.05); box-shadow:0 0 80px #ff7700,0 0 120px #ff4444,0 0 200px #ff7700;}
+}
+
+/* Titulos de secciones grandes */
+#screen1 h1, #screen2 h2, #screen3 h2{
+  font-size:4rem;
+  color:#ff7700; /* naranja */
+  text-shadow:0 0 50px #ff4444,0 0 100px #ff7700; /* glow rojo/naranja */
+  margin-bottom:20px;
+}
+
+/* Fotos grandes con glow */
+.foto-perfil,.foto-sobre-mi{
+  border-radius:12px;
+  max-width:450px;
+  margin:20px auto;
+  border:3px solid #ff7700;
+  box-shadow:0 0 35px rgba(255,119,0,0.8),0 0 50px rgba(255,68,68,0.5);
+  transform-origin:center center;
+}
+
+/* Iconos con glow */
+.icons img{
+  width:100px;
+  margin:15px;
+  border-radius:8px;
+  box-shadow:0 0 20px #ff7700,0 0 40px #ff4444;
+}
+
+/* ---------- SECCIONES PRINCIPALES ---------- */
+main{
+  padding:60px 20px;
+}
+
+main section{
+  margin:60px auto;
+  max-width:900px;
+  padding:40px;
+  background:rgba(20,20,20,0.85); /* semitransparente oscuro */
+  border-radius:12px;
+  box-shadow:0 0 30px rgba(255,119,0,0.3); /* glow naranja */
+  transition:transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+main section:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 40px rgba(255,119,0,0.5);
+}
+
+main section h2{
+  font-size:2rem;
+  margin-bottom:20px;
+  color:#ff7700; /* naranja */
+}
+
+main section p, main section li{
+  font-size:1rem;
+  color:#fff; /* texto blanco */
+}
+
+ul{list-style:none; padding-left:0;}
+ul li{
+  margin-bottom:10px;
+  padding-left:20px;
+  position:relative;
+}
+ul li::before{
+  content:"•";
+  color:#ff4444; /* rojo */
+  position:absolute;
+  left:0;
+  font-size:1.2rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  text-align:center;
+  padding:30px 20px;
+  background:#111;
+  font-size:0.9rem;
+  color:#fff; /* blanco */
+  letter-spacing:1px;
+}
+
+/* ---------- ANIMACIONES ---------- */
+@keyframes fadeInZoom{
+  from{opacity:0; transform:scale(1.3);}
+  to{opacity:1; transform:scale(1);}
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1; transform:translateY(0);}
+}
